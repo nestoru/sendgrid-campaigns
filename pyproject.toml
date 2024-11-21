@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "sendgrid-campaigns"
+version = "0.1.0"
+description = "A package to extract HTML from .eml files and manage SendGrid campaigns."
+authors = ["Nestor Urquiza <nestor.urquiza@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "sendgrid_campaigns"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+sendgrid = "^6.10.1"
+beautifulsoup4 = "^4.12.2"
+pillow = "^11.0.0"
+azure-storage-blob = "^12.19.0"
+
+[tool.poetry.scripts]
+sendgrid-campaigns = "sendgrid_campaigns.cli:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
